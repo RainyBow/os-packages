@@ -43,6 +43,12 @@ jobs:
           - name: ubuntu-2004
             image_name: os-packages-ubuntu2004
             dockerfile: build/Dockerfile.os.ubuntu2004
+          - name: ubuntu-2204
+            image_name: os-packages-ubuntu2204
+            dockerfile: build/Dockerfile.os.ubuntu2204
+          - name: ubuntu-2304
+            image_name: os-packages-ubuntu2304
+            dockerfile: build/Dockerfile.os.ubuntu2304
     steps:
       - name: Checkout
         uses: actions/checkout@v2
