@@ -1,6 +1,6 @@
 - id: set-env
   name: set env
-  run: run: echo ::set-env name=repository_owner::$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')
+  run: echo ::set-env name=repository_owner::$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')
 
 
 - id: build
