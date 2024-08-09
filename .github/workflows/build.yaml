@@ -51,10 +51,9 @@ jobs:
             dockerfile: build/Dockerfile.os.ubuntu2304
     steps:
       - name: Set Env
-        run:  echo ::set-env name=IMAGE_REPO::$(echo ${{ env.IMAGE_REPO }} | tr '[:upper:]' '[:lower:]')
-      
+        run:  echo "IMAGE_REPO=$(echo ${{ env.IMAGE_REPO }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
       - name: Show env
-        run:  echo env.IMAGE_REPO=${{env.IMAGE_REPO}}
+        run:  echo "env.IMAGE_REPO=${{env.IMAGE_REPO}}##IMAGE_REPO=${IMAGE_REPO}"
       - name: Checkout
         uses: actions/checkout@v2
         with:
